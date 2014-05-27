@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rfid: MyString
+  picture: MyString
+  name: MyString
+  id: 1
+
+two:
+  rfid: MyString
+  picture: MyString
+  name: MyString
+  id: 1
