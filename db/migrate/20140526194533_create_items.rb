@@ -2,7 +2,7 @@ class CreateItems < ActiveRecord::Migration
   def change
     create_table :items do |t|
       t.string :rfid
-      t.string :picture
+      t.text :description
       t.string :name
 
       t.timestamps

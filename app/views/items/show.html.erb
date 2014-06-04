@@ -6,8 +6,8 @@
 </p>
 
 <p>
-  <strong>Picture:</strong>
-  <%= @item.picture %>
+  <strong>Image:</strong>
+  <%= image_tag @item.image_url(:thumb).to_s if @item.image? %>
 </p>
 
 <p>
@@ -16,8 +16,8 @@
 </p>
 
 <p>
-  <strong>Id:</strong>
-  <%= @item.id %>
+  <strong>Description:</strong>
+  <%= @item.description %>
 </p>
 
 <%= link_to 'Edit', edit_item_path(@item) %> |

@@ -11,14 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140526194533) do
+ActiveRecord::Schema.define(version: 20140529184846) do
 
   create_table "items", force: true do |t|
     t.string   "rfid"
-    t.string   "picture"
+    t.string   "description"
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image"
   end
 
 end
