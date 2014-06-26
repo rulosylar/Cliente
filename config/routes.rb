@@ -5,6 +5,10 @@ Rails.application.routes.draw do
 
   root :to => 'warehouse#index'
 
+  post 'updateitems', :to => 'warehouse#updateItems'
+
+  # post 'updateitems', :to => 'items#updateitems'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
