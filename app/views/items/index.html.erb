@@ -13,18 +13,24 @@
 
   <tbody>
     <% @items.each do |item| %>
-      <tr>
-        <td><%= item.rfid %></td>
-        <td><%= image_tag item.image_url(:thumb).to_s if item.image? %></td>
-        <td><%= item.name %></td>
-        <td><%= item.description %></td>
-        <td><%= link_to 'Show', item %></td>
-        <td><%= link_to 'Edit', edit_item_path(item) %></td>
-        <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <%if item.image? %>
+        <tr>
+          <td><%= item.rfid %></td>
+          <td><%= image_tag item.image_url(:thumb).to_s if item.image? %></td>
+          <td><%= item.name %></td>
+          <td><%= item.description %></td>
+          <td>
+            <ul class="button-group">
+              <li><%= link_to 'Show', item, class: "small button" %></li>
+              <li><%= link_to 'Edit', edit_item_path(item), class: "small button" %></li>
+              <li><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' }, class: "small button" %></li>
+            </ul>
+          </td>
+        </tr>
+      <% end %>
     <% end %>
   </tbody>
 </table>
 <br>
 
-<%= link_to 'New Item', new_item_path %>
+<%= link_to 'New Item', new_item_path, class: "button [tiny]" %>

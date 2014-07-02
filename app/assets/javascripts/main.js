@@ -1,5 +1,5 @@
 jQuery(document).ready(function($) {
-  var socket = io.connect('http://localhost:3001/client');
+  var socket = io.connect('http://192.168.1.118:3001/client');
   socket.on('hola',function(data) {
 		console.log(data);
   });

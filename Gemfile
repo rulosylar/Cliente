@@ -41,3 +41,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 # Gemas para subir imagenes
 gem "rmagick"
 gem "carrierwave"
+
+gem 'foundation-rails'

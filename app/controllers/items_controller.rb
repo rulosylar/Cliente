@@ -5,7 +5,6 @@ class ItemsController < ApplicationController
   # GET /items.json
   def index
     @items = Item.all
-    # @items = Item.valid ...
   end
 
   # GET /items/1

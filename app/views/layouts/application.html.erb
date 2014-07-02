@@ -1,13 +1,20 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Cliente</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <script src="http://localhost:3001/socket.io/socket.io.js"></script>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-	<%= yield %>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "Cliente" %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <script src="http://192.168.1.118:3001/socket.io/socket.io.js"></script>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+
+    <%= yield %>
+    <%= javascript_include_tag "application" %>
+  </body>
 </html>

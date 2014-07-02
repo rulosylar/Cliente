@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140529184846) do
+ActiveRecord::Schema.define(version: 20140627224519) do
 
   create_table "items", force: true do |t|
     t.string   "rfid"
@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(version: 20140529184846) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image"
+    t.integer  "antenna"
+    t.string   "flag"
   end
 
 end
